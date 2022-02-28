@@ -1,7 +1,6 @@
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
 import 'functions.dart';
 
@@ -69,7 +68,6 @@ class _MyAppState extends State<MyApp> {
                   child: SizedBox(
                     width: MediaQuery.of(context).size.width * .33,
                     child: Column(
-                      
                       children: [
                         Icon(
                           CupertinoIcons.heart_fill,
@@ -81,7 +79,8 @@ class _MyAppState extends State<MyApp> {
                     ),
                   ),
                 ),
-              ),SizedBox(
+              ),
+              SizedBox(
                 width: MediaQuery.of(context).size.width * .33,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -89,6 +88,7 @@ class _MyAppState extends State<MyApp> {
                     onPressed: () {
                       setState(() {
                         newwordgenerator();
+                        
                       });
                     },
                     child: Column(
@@ -104,7 +104,6 @@ class _MyAppState extends State<MyApp> {
                   ),
                 ),
               ),
-              
             ],
           ),
         ],
