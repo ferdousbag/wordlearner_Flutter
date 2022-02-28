@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:webview_flutter/webview_flutter.dart';
 
 import 'functions.dart';
 
@@ -13,7 +12,7 @@ class MApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Word Learner',
       home: MyApp(),
@@ -39,7 +38,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Word Learner'),
+        title: const Text('Word Learner'),
         centerTitle: true,
       ),
       body: Column(
@@ -50,7 +49,8 @@ class _MyAppState extends State<MyApp> {
               child: SelectableText(
                 newwordgenerator().toString(),
                 maxLines: 1,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 50),
+                style:
+                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 50),
               ),
             ),
           ),
@@ -69,41 +69,41 @@ class _MyAppState extends State<MyApp> {
                     width: MediaQuery.of(context).size.width * .33,
                     child: Column(
                       children: [
-                        Icon(
+                        const Icon(
                           CupertinoIcons.heart_fill,
                           color: Colors.red,
                           size: 30,
                         ),
-                        Text('I know it!')
+                        const Text('I know it!')
                       ],
                     ),
                   ),
                 ),
               ),
-              SizedBox(
-                width: MediaQuery.of(context).size.width * .33,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: OutlinedButton(
-                    onPressed: () {
-                      setState(() {
-                        newwordgenerator();
-                        
-                      });
-                    },
-                    child: Column(
-                      children: [
-                        Icon(
-                          CupertinoIcons.heart_slash_fill,
-                          color: Colors.red,
-                          size: 30,
-                        ),
-                        Text('I don\'t know')
-                      ],
-                    ),
-                  ),
-                ),
-              ),
+              // SizedBox(
+              //   width: MediaQuery.of(context).size.width * .33,
+              //   child: Padding(
+              //     padding: const EdgeInsets.all(8.0),
+              //     child: OutlinedButton(
+              //       onPressed: () {
+              //         setState(() {
+              //           newwordgenerator();
+
+              //         });
+              //       },
+              //       child: Column(
+              //         children: [
+              //           const Icon(
+              //             CupertinoIcons.heart_slash_fill,
+              //             color: Colors.red,
+              //             size: 30,
+              //           ),
+              //           const Text('I don\'t know')
+              //         ],
+              //       ),
+              //     ),
+              //   ),
+              // ),
             ],
           ),
         ],
